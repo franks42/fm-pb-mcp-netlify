@@ -1,2 +1,12 @@
 [build]
   functions = "netlify/functions"
+
+[[redirects]]
+  from = "/price/*"
+  to = "/.netlify/functions/price/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/.netlify/functions/price/*"
+  to = "/.netlify/functions/price"
+  status = 200
